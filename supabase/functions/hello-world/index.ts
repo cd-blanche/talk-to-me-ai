@@ -3,21 +3,19 @@
 // This enables autocomplete, go to definition, etc.
 
 // Setup type definitions for built-in Supabase Runtime APIs
-/// <reference types="https://esm.sh/@supabase/functions-js/src/edge-runtime.d.ts" />
+/// <reference types="https://esm.sh/v135/@supabase/functions-js@2.4.1/src/edge-runtime.d.ts" />
 
-console.log("Hello from Functions!")
+console.log("Hello from Functions!");
 
 Deno.serve(async (req) => {
-
   const data = {
     message: `Someone wants a massage :P`,
-  }
+  };
 
-  return new Response(
-    JSON.stringify(data),
-    { headers: { "Content-Type": "application/json" } },
-  )
-})
+  return new Response(JSON.stringify(data), {
+    headers: { "Content-Type": "application/json" },
+  });
+});
 
 /* To invoke locally:
 
